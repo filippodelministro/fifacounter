@@ -1,6 +1,6 @@
 import all
 
-all.init()
+# all.init()
 all.boot_command()
 
 while True:

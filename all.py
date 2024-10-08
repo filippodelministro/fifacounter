@@ -1,4 +1,3 @@
-import query
 
 import sys
 import os
@@ -18,15 +17,13 @@ pswd_list = []   # list of pswd_objects
 #                  UTILITY FUNCTIONS
 # ----------------------------------------------- 
 
-def init():
-    conn = sqlite3.connect('password.db')
-    cursor = conn.cursor()
-    
-    q = query.create_database()
-    cursor.execute(q)
+# def init():
+    # todo: initialize the DB for user, matches ecc.
+    # conn = sqlite3.connect('password.db')
+    # cursor = conn.cursor()
 
-    conn.commit()
-    conn.close()
+    # conn.commit()
+    # conn.close()
 
 def prompt():
     print(">", end='')
@@ -43,7 +40,7 @@ def help_command():
     )
 
 def boot_command():
-    print("Welcome in pswdman!\n")
+    print("Welcome in fifacounter!\n")
     help_command()
 
 def esc_command():
@@ -69,16 +66,14 @@ def save_command():
 
             return
 
-    while not ok:
-        psw = input("password: ")
-        confirm = input("password confirm: ")
+    #!fix 
+    psw = input("password: ")
+    confirm = input("password confirm: ")
 
-        if psw == confirm:
-            ok = True
-        else:
-            print("password dont match: retry\n")
-
-    pswd_list.append(pswd_object(serv, psw))
+    if psw == confirm:
+        pswd_list.append(pswd_object(serv, psw))
+    else:
+        print("password dont match: retry\n")
 
 
 def clear_command():
@@ -105,4 +100,3 @@ def read_command():
         print("Command not found!\n")
         help_command()
         
-
