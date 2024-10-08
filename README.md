@@ -15,9 +15,9 @@ Goals scored and conceded are based only on regular and extra time, not penaltie
 
 ## Commands
 The FIFA counter service should allow users the following commands:
-- [[Fifa counter#add_match|add_match]]
-- [[Fifa counter#remove_match|remove_match]]
-- [[Fifa counter#stats|stats]]
+- add_match
+- remove_match
+- stats
 
 ### add_match
 The user inputs a match into the database; adding the match will trigger an update to the database, not only for match data but also for debts/credits between players and statistics, all in accordance with the [[Fifa counter#Match Rules|match rules]].
@@ -61,6 +61,4 @@ Allows the user to view tournament statistics with the following options:
   - Goals For, Goals Against, Goal Difference of B over A in penalties
   - The star rating where A has beaten B the most times
   - The star rating where B has beaten A the most times
-
-## Leaderboard
 
